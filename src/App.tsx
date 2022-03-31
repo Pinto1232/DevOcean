@@ -1,15 +1,23 @@
 import { useState } from 'react'
-
 import './App.css'
-import Item from './components/ItemView/Item'
-import Navbar from './components/Navbar/Navbar'
+// @ts-ignore
+import{Navbar,Footer, Item} from './components/exports/Exports'
+import { Layout, Typography, Space } from 'antd'
+import { Route, Routes, Navigate, Link } from 'react-router-dom';
 
 function App() {
 
   return (
     <div className="App">
-       <Navbar />
-       <Item />
+       <div className="navbar">
+             <Navbar />
+       </div>
+      <div className="itemView">
+           <Item />
+      </div>
+      <div className="footer">
+        {/* <Footer /> */}
+      </div>
     </div>
   )
 }
