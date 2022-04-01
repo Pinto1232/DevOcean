@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
+import { useGetDevOceanDataQuery } from '../../services/devOceanApi';
 
 
 const TABLE = styled.table`
@@ -43,8 +45,17 @@ const TDATA = styled.td`
   border-top: 4px solid #f8f8fa;
 `
 
+const LinkData = styled.p`
+    color: black;
+`
+
+
 
 const Table: React.FC = () => {
+  const { data, isFetching } = useGetDevOceanDataQuery()
+
+  console.log(data);
+  
   return (
       <>
       <TABLE>
@@ -57,7 +68,11 @@ const Table: React.FC = () => {
         <TBODY>
           <TROW>
               <TDATA>Pinto Manuel</TDATA>
-              <TDATA>Software Developer</TDATA>
+            <TDATA>
+              <Link style={{textDecoration: "none"}} to="/">
+                <LinkData>Software Developer</LinkData>
+               </Link>
+            </TDATA>
           </TROW>
         </TBODY>
       </TABLE>
