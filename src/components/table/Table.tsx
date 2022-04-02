@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'
+import LightTheme from '../table/theme.js'
 import { useGetDevOceanDataQuery } from '../../services/devOceanApi';
+
 
 
 const TABLE = styled.table`
@@ -19,6 +21,11 @@ const THEAD = styled.thead`
   color: #de007e;
   font-weight: 900;
   height:3em;
+
+  @media(max-width: 768px){
+    font-size: 13px;
+    text-align: center;
+  }
 `
 
 const TROW = styled.tr`
@@ -32,8 +39,13 @@ const TH = styled.th`
 
 const TBODY = styled.tbody`
    height:3em;
+
     &:hover{
      background:#f8f8fa;
+  }
+   @media(max-width: 768px){
+    font-size: 13px;
+    text-align: start;
   }
 `
 
@@ -51,17 +63,18 @@ const LinkData = styled.p`
 
 
 
-const Table: React.FC = () => {
+const Table: React.FC = (props) => {
   const { data, isFetching } = useGetDevOceanDataQuery()
   const globalData = data?.data?.globalData; 
  
-  console.log(data);
+  /* console.log(data); */
 
   if(isFetching) return <p style={{textAlign: 'center'}}>Loading data...</p>
   
   return (
+   
     <>
-      <TABLE>
+      <TABLE className={LightTheme.bg}>
         <THEAD>
           <TROW>
             <TH>Name</TH>
@@ -75,7 +88,7 @@ const Table: React.FC = () => {
                  <TROW key={id}>
             <TDATA>{dataDescription.name}</TDATA>
             <TDATA>
-              <Link style={{textDecoration: "none"}} to="/">
+              <Link style={{textDecoration: "none"}} to="/list">
                 <LinkData>{dataDescription.description}</LinkData>
                </Link>
             </TDATA>

@@ -2,6 +2,7 @@ import React from 'react'
 import Card from '../UI/Card'
 import styled from 'styled-components'
 import logo from '../assets/Logo.png'
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -14,14 +15,15 @@ const Navbar = () => {
 
 
   & img{
-    max-width: 22%;
+    max-width: 34%;
   }
 
   & p{
-    margin-top: 9px;
-    font-family: 'Arial', sans-serif;
+    margin-top: -33px;
+    font-family: 'Arial',sans-serif;
     color: #94939e;
-    font-size: 16px;
+    font-size: 17px;
+    margin-left: 26px;
   }
 
 
@@ -32,7 +34,7 @@ const Navbar = () => {
   return (
     <Card>
       <Block>
-           <img src={logo} alt="" /> <p>Logo</p>
+           <Link style={{textDecoration: 'none'}} to="/" ><img src={logo} alt="" /> <p>Logo</p></Link>
       </Block>
     </Card>
   )

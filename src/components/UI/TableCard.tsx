@@ -1,15 +1,16 @@
-import classes from './TableCard';
+import {classes, Wrapper} from './TableCard';
+
 
 interface Props {
   cardtable: String;
 }
 
 
-const TableCard = (props: any) => {
+const TableCard: React.FC = (props: any) => {
   return (
-      <div className={classes.cardtable}>
+      <Wrapper className={classes.cardtable}>
           {props.children}
-      </div>
+      </Wrapper>
   )
 }
 

@@ -1,4 +1,4 @@
-import classes from './Card';
+import classes from '../UI/ImageWrapperStyles';
 import Wrapper from '../UI/TableCard'
 interface Props {
   card: String;
@@ -6,7 +6,7 @@ interface Props {
 
 
 const Card: React.FC = (props: any) => {
-  return <Wrapper className={classes.card}>
+  return <Wrapper className={classes.ImageCard}>
     {props.children}
   </Wrapper>;
 };

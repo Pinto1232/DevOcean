@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
 // @ts-ignore
-import{Navbar,Footer, Item, Global} from './components/exports/Exports'
-import { Layout, Typography, Space } from 'antd'
+import{Navbar, Item, Global} from './components/exports/Exports'
 import { Route, Routes, Navigate, Link } from 'react-router-dom';
 import GlobalStyle  from './components/globals/Global'
+import List from './components/ListView/List';
 
 
 const App: React.FC = () => {
@@ -12,9 +12,14 @@ const App: React.FC = () => {
 
   return (
     <>
-          <GlobalStyle />
-          <Navbar />
-          < Item/>
+      <GlobalStyle />
+      <Navbar />
+      
+      <Routes>
+        <Route path="/" element={< Item />} />
+        <Route  path="/list" element={<List />} />
+      </Routes>
+       
       </>
   
   )
