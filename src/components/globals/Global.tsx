@@ -9,7 +9,7 @@ export default createGlobalStyle`
 }
 
 body{
-    background-color: rgb(248, 248, 250);
+    background-color: #f8f8fa;
     font-family: 'Roboto', sans-serif;
 }
 `
