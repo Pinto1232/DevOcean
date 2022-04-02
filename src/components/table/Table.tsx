@@ -57,10 +57,10 @@ const Table: React.FC = () => {
  
   console.log(data);
 
-  if(isFetching) return <p>Loading...</p>
+  if(isFetching) return <p style={{textAlign: 'center'}}>Loading data...</p>
   
   return (
-      <>
+    <>
       <TABLE>
         <THEAD>
           <TROW>
@@ -69,14 +69,14 @@ const Table: React.FC = () => {
           </TROW>
         </THEAD>
         <TBODY>
-          {data?.map((d, id) =>
+          {data?.map((dataDescription, id) =>
           {
             return (
                  <TROW key={id}>
-            <TDATA>{d.name}</TDATA>
+            <TDATA>{dataDescription.name}</TDATA>
             <TDATA>
               <Link style={{textDecoration: "none"}} to="/">
-                <LinkData>{d.description}</LinkData>
+                <LinkData>{dataDescription.description}</LinkData>
                </Link>
             </TDATA>
           </TROW>
