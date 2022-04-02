@@ -53,8 +53,11 @@ const LinkData = styled.p`
 
 const Table: React.FC = () => {
   const { data, isFetching } = useGetDevOceanDataQuery()
-
+  const globalData = data?.data?.globalData; 
+ 
   console.log(data);
+
+  if(isFetching) return <p>Loading...</p>
   
   return (
       <>
@@ -66,14 +69,19 @@ const Table: React.FC = () => {
           </TROW>
         </THEAD>
         <TBODY>
-          <TROW>
-              <TDATA>Pinto Manuel</TDATA>
+          {data?.map((d, id) =>
+          {
+            return (
+                 <TROW key={id}>
+            <TDATA>{d.name}</TDATA>
             <TDATA>
               <Link style={{textDecoration: "none"}} to="/">
-                <LinkData>Software Developer</LinkData>
+                <LinkData>{d.description}</LinkData>
                </Link>
             </TDATA>
           </TROW>
+            )
+          })}
         </TBODY>
       </TABLE>
       </>
