@@ -3,6 +3,11 @@ import React from 'react'
 import banner from '../assets/hover.jpg'
 import {useGetDevOceanDataQuery} from '../../services/devOceanApi'
 import { WrapperImage } from '../ListView/ListStyle'
+import styled from 'styled-components'
+
+const GRID = styled.div`
+   
+`
 
 
 const Frame: React.FC = () => {
@@ -11,8 +16,10 @@ const Frame: React.FC = () => {
     
     /* console.log(data); */
   return (
-        <WrapperImage>
-             <img src={banner} alt="" />
+       <WrapperImage>
+            <GRID>
+                  <img src={banner} alt="" />
+            </GRID>
         </WrapperImage>
      )
 }

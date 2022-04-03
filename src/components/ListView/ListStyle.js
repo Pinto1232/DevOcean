@@ -6,7 +6,7 @@ export const WrapperImage = styled.div`
         align-items: center;
         justify-content:center;
         margin: 4rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+   
 
         & img{
           max-width: 100%;
@@ -21,8 +21,23 @@ export const GridWrapper = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin: 0 7rem;
+
+      @media(max-width: 768px){
+        margin: 4rem;
+        flex-wrap: wrap;
+        text-align: start;
+      }
 `
 export const GridContent = styled.div`
+  padding: auto;
+  margin: auto;
+  border: 1px solid #fff;
+    padding: 1em;
+    margin: 1rem;
+
+  
+ 
 
 `
 export const Typography = styled.h2`
@@ -30,6 +45,9 @@ export const Typography = styled.h2`
 `
 
 export const Paragraph = styled.p`
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 14px
 `
 

@@ -88,7 +88,10 @@ const Table: React.FC = (props) => {
                  <TROW key={id}>
             <TDATA>{dataDescription.name}</TDATA>
             <TDATA>
-              <Link style={{textDecoration: "none"}} to="/list">
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    to="/list">
+  
                 <LinkData>{dataDescription.description}</LinkData>
                </Link>
             </TDATA>
