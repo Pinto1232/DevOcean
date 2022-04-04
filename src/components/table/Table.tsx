@@ -95,7 +95,7 @@ const TH = styled.th`
 `
 const TBODY = styled.tbody`
    height:3em;
-   font-size: 14px;
+   font-size: 15px;
    
 
 
