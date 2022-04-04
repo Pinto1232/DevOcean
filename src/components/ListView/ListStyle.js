@@ -40,7 +40,7 @@ export const GridWrapper = styled.div`
       justify-content: space-between;
       align-items: center;
       margin: 0 7rem;
-
+      align-items: baseline;
   
       @media(max-width: 768px){
         margin: 4rem;
@@ -49,19 +49,20 @@ export const GridWrapper = styled.div`
       }
 `
 export const GridContent = styled.div`
- 
   padding: auto;
   margin: auto;
-  border: 1px solid #fff;
   padding: 1em;
   margin: 1rem;
 `
-export const Typography = styled.h2``
+export const Typography = styled.h2`
+`
 
 export const Paragraph = styled.p`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   font-size: 14px;
+  color: #adadad;
+  line-height:1.5;
 `
 

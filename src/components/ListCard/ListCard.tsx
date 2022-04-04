@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {useGetDevOceanDataQuery} from '../../services/devOceanApi'
-import ListCardModel from '../ListView/ListCardModel'
 import {GridWrapper, GridContent, Typography, Paragraph} from '../ListView/ListStyle'
 import PlaceCard from '../UI/PlaceCard'
 import { useLocation} from 'react-router-dom'
@@ -23,7 +22,7 @@ const ListCard = (props) => {
         <GridWrapper>
             <GridContent>
                 <Typography>Address</Typography>
-                        <Paragraph  style={{color: '#adadad'}}>
+                        <Paragraph >
                             {`${locateAddressInfo.StreetNum}, ${locateAddressInfo.StreeName} Street`}
                             <br />
                             {`${locateAddressInfo.City}, ${locateAddressInfo.ZipCode}`}
@@ -31,7 +30,7 @@ const ListCard = (props) => {
             </GridContent>
             <GridContent>
                 <Typography>Contact</Typography>
-                        <Paragraph style={{color: '#adadad'}}>
+                        <Paragraph >
                            {`${locateAddressInfo.compPhone}`}
                            <br />
                            {`${locateAddressInfo.Email}`}
@@ -40,8 +39,17 @@ const ListCard = (props) => {
             <PlaceCard>
                 <GridContent>
                     <Typography>Nearby Places</Typography>
-                    <Paragraph style={{color: '#adadad'}}>
-                       {`${locateAddressInfo.CompDesc}`}
+                    <Paragraph style={{background: '#f8f8fa', padding: '10px', marginTop: '10px'}}>
+                        {`Caffe Nero   1st Floor, c/o Monleys, 472-488  ${locateAddressInfo.StreeName} Rd, ${locateAddressInfo.City} SW9 ${locateAddressInfo.ZipCode}`}
+                    </Paragraph>
+                    <Paragraph  style={{background: '#f8f8fa', padding: '10px', marginTop: '10px'}}>
+                        {`EAT.   1st Floor, c/o Monleys, 472-488  ${locateAddressInfo.StreeName} Rd, ${locateAddressInfo.City} SW9 ${locateAddressInfo.ZipCode}`}
+                    </Paragraph>
+                    <Paragraph  style={{background: '#f8f8fa', padding: '10px', marginTop: '10px'}}>
+                        {`Pret A Manger   1st Floor, c/o Monleys, 472-488  ${locateAddressInfo.StreeName} Rd, ${locateAddressInfo.City} SW9 ${locateAddressInfo.ZipCode}`}
+                    </Paragraph>
+                    <Paragraph  style={{background: '#f8f8fa', padding: '10px', marginTop: '10px'}}>
+                        {`Caffe Republic 1st Floor, c/o Monleys, 472-488  ${locateAddressInfo.StreeName} Rd, ${locateAddressInfo.City} SW9 ${locateAddressInfo.ZipCode}`}
                     </Paragraph>
                 </GridContent>
             </PlaceCard>

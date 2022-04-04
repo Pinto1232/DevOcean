@@ -37,7 +37,7 @@ const Table: React.FC = (props) => {
           {
             return (
                  <TROW key={id}>
-            <TDATA>{dataDescription.name}</TDATA>
+            <TDATA style={{ color: '#adadad'}}>{dataDescription.name}</TDATA>
             <TDATA>
                   <Link 
                     style={{ textDecoration: "none" }}
@@ -106,11 +106,11 @@ const TBODY = styled.tbody`
 `
 const TDATA = styled.td`
   border-spacing:1rem 0.1rem;
-  table-layout:fixed;/*auto viene por defecto*/
+  table-layout:fixed;
   empty-cells: hide;
   padding: 10px;
   border-top: 4px solid #f8f8fa;
 `
 const LinkData = styled.p`
-    color: black;
+    color: #adadad;
 `
