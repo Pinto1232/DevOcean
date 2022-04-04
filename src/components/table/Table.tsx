@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Link, useNavigate } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import LightTheme from '../table/theme.js'
 import { useGetDevOceanDataQuery } from '../../services/devOceanApi';
 
@@ -10,17 +10,9 @@ const Table: React.FC = (props) => {
   const {data: tableData, id, isFetching } = useGetDevOceanDataQuery()
   const globalData = tableData?.tableData?.globalData; 
 
-  const navigate = useNavigate();
- 
   /* console.log(tableData);  */
 
   if (isFetching) return <p>Loading data...</p>
-
-
-  const myData = { 
-    
-  }
-  
 
   
   return (
