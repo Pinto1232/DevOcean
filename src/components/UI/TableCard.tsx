@@ -1,14 +1,19 @@
-import {classes, Wrapper} from './TableCard';
+import Wrapper from './TableCard';
+import classes from '../UI/TableCard.js';
 
 
-interface Props {
-  cardtable: String;
+interface Cardprops<Type> {
+  cardtable: string;
 }
 
+declare const cardtable: Cardprops<string>;
 
-const TableCard: React.FC = (props: any) => {
+
+const TableCard = (props) => {
+  
+
   return (
-      <Wrapper className={classes.cardtable}>
+    <Wrapper className={classes.cardtable}>
           {props.children}
       </Wrapper>
   )

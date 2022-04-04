@@ -14,12 +14,10 @@ const App: React.FC = () => {
     <>
       <GlobalStyle />
       <Navbar />
-      
       <Routes>
         <Route path="/" element={< Item />} />
-        <Route  path="/list" element={<List />} />
+        <Route  path="/list/:id" element={<List />} />
       </Routes>
-       
       </>
   
   )

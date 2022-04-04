@@ -6,13 +6,21 @@ import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
+
+  return (
+    <Card>
+      <Block>
+           <Link style={{textDecoration: 'none'}} to="/" ><img src={logo} alt="" /> <p>Logo</p></Link>
+      </Block>
+    </Card>
+  )
+}
+
+export default Navbar
   const Block = styled.h3`
   display: flex;
   text-decoration: none;
   text-transform: uppercase;
-
-
-
 
   & img{
     max-width: 34%;
@@ -25,19 +33,4 @@ const Navbar = () => {
     font-size: 17px;
     margin-left: 26px;
   }
-
-
-  
   `
-
-
-  return (
-    <Card>
-      <Block>
-           <Link style={{textDecoration: 'none'}} to="/" ><img src={logo} alt="" /> <p>Logo</p></Link>
-      </Block>
-    </Card>
-  )
-}
-
-export default Navbar

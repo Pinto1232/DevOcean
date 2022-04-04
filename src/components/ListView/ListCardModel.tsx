@@ -3,9 +3,6 @@ import styled from 'styled-components'
 import classes from '../ListView/CardStyle'
 
 const ListCardModel = (props: any) => {
-    
-  const Wrapper = styled.div``
-    
   return (
       <Wrapper className={classes.MainCard}>
           {props.children}
@@ -14,3 +11,4 @@ const ListCardModel = (props: any) => {
 }
 
 export default ListCardModel
+const Wrapper = styled.div``

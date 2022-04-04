@@ -1,11 +1,11 @@
 import classes from './Card';
 import Wrapper from '../UI/TableCard'
-interface Props {
+interface PropsCard {
   card: String;
 }
 
 
-const Card: React.FC = (props: any) => {
+const Card = (card: PropsCard, props) => {
   return <Wrapper className={classes.card}>
     {props.children}
   </Wrapper>;

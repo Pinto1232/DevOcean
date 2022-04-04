@@ -6,6 +6,4 @@ const LightTheme = `
     text: "rgb(33, 33, 33)",
     primary: "rgb(224, 132, 209)", 
 `
-    
-
 export default LightTheme;
