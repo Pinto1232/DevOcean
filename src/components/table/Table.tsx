@@ -14,7 +14,7 @@ const Table: React.FC = (props) => {
  
   /* console.log(tableData);  */
 
-  if (isFetching) return <p style={{ textAlign: 'center' }}>Loading data...</p>
+  if (isFetching) return <p>Loading data...</p>
 
 
   const myData = { 
@@ -95,12 +95,13 @@ const TH = styled.th`
 `
 const TBODY = styled.tbody`
    height:3em;
+   font-size: 14px;
+   
 
-    &:hover{
-     background:#f8f8fa;
-  }
+
+  
    @media(max-width: 768px){
-    font-size: 13px;
+    font-size: 14px;
     text-align: start;
   }
 `
@@ -110,6 +111,10 @@ const TDATA = styled.td`
   empty-cells: hide;
   padding: 10px;
   border-top: 4px solid #f8f8fa;
+
+    &:hover{
+     background:#f8f8fa;
+  }
 `
 const LinkData = styled.p`
     color: #adadad;

@@ -41,6 +41,7 @@ export const GridWrapper = styled.div`
       align-items: center;
       margin: 0 7rem;
       align-items: baseline;
+      
   
       @media(max-width: 768px){
         margin: 4rem;

@@ -16,9 +16,9 @@ const Frame: React.FC = (props) => {
      const dataImg = locateImage?.state
      
     
-     if (isFetching) return <p style={{ textAlign: 'center' }}>Loading data...</p>
+     if (isFetching) return <p>Loading data...</p>
      
-     if (error) return <p style={{ textAlign: 'center' }}>{ error.message}</p>
+     if (error) return <p>{ error.message}</p>
 
      /* console.log('Data image',dataImg) */
   
